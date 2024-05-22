@@ -32,7 +32,7 @@ const Redirect = ({ url, collection }) => {
                 name="message"
                 placeholder="Enter user name"
                 onChange={handleInputChange}
-                value={newUser}
+                value={newUser || ''}
                 required // This makes the input mandatory
             />
             <button onClick={handleClick} disabled={!newUser}>

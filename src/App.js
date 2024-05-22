@@ -3,9 +3,11 @@ import { Navigate, Routes, Route, BrowserRouter } from "react-router-dom"
 import PlayerContainer from './components/PlayerContainer';
 import URLSender from './components/URLSender';
 import Home from './components/Home';
+import Sync from './components/Sync';
 import { generate } from "random-words";
 import { useRxQuery, useRxCollection, useRxData } from 'rxdb-hooks';
 import Redirect from './components/Redirect'; // Assuming RedirectButton.js is in the same directory
+
 
 const App = () => {
   // 404 component
@@ -35,6 +37,9 @@ const App = () => {
   //urlcollection.destroy();
 
 
+  
+/* ... add routes from below */
+
   return (
     <BrowserRouter>
       <Routes>
@@ -49,6 +54,8 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/player" element={<PlayerContainer />} />
         <Route path="/urlsender" element={<URLSender />} />
+        <Route path="/sync" component={<Sync />} />
+
         <Route path="*" element={<NotFound />} />
 
       </Routes>

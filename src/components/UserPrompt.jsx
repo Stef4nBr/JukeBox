@@ -24,7 +24,7 @@ const UserPrompt = ({ userNameValue }) => {
                 name="message"
                 placeholder="Enter user name"
                 onChange={handleInputChange}
-                value={userName}
+                value={userName || ''}
                 required // This makes the input mandatory
             />
             <button onClick={handleClick} disabled={!userName}>
